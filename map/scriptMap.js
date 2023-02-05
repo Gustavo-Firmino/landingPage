@@ -18,14 +18,33 @@ ADM
             center: mapLoc,
             //por padrão, o mapa é o ROADMAP
             //mapTypeId: google.maps.MapTypeId.SATELLITE
+
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                position: google.maps.ControlPosition.TOP_LEFT,
+            },
+
+            zoomControl: true,
+            zoomControlOptions: {
+                position: google.maps.ControlPosition.LEFT_CENTER,
+            },
+
+            scaleControl: true,
+            streetViewControl: true,
+            streetViewControlOptions: {
+                position: google.maps.ControlPosition.LEFT_TOP,
+            },
+
+            fullscreenControl: true,
         });
-        
+
         //marcacao parada (nao pula)
         /*
             var marker = new google.maps.Marker({position: mapLoc});
             marker.setMap(mapProp);
         */
-
+        
         //marcacao animada
         var marker = new google.maps.Marker({
         position:mapLoc,
@@ -37,5 +56,3 @@ ADM
         marker.setMap(mapProp);
 
     }
-    
-      
